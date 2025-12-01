@@ -1,0 +1,136 @@
+/* Dark tech background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Center card with soft glow */
+.login-box {
+    text-align: center;
+    padding: 35px 50px;
+    background: rgba(20, 20, 20, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 0 20px #00ff8844;
+}
+
+/* Title styling */
+.login-box h1 {
+    margin-bottom: 6px;
+    color: #00FF88;
+}
+
+/* Input glow effect */
+#username {
+    width: 210px;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background: #1f1f1f;
+    color: #fff;
+    box-shadow: 0 0 12px #00ff8855;
+    text-align: center;
+}
+
+/* Button styling & glow interaction */
+button {
+    margin-top: 18px;
+    width: 230px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #00FF88;
+    border: none;
+    border-radius: 6px;
+    color: #121212;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 0 18px #00ffcc;
+    transform: scale(1.05);
+}
+/* Add–action form */
+.add-action {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.add-action input,
+.add-action select {
+    background: #1f1f1f;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    color: #ffffff;
+    outline: none;
+    min-width: 140px;
+}
+
+#add-action-btn {
+    background: #00FF88;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #121212;
+    transition: 0.3s;
+}
+
+#add-action-btn:hover {
+    box-shadow: 0 0 12px #00ffcc;
+    transform: scale(1.05);
+}
+
+/* Dynamic actions list */
+#actions-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px auto;
+    width: 280px;
+    text-align: left;
+}
+
+#actions-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+#actions-list li span {
+    flex: 1;
+}
+
+/* small delete button */
+.delete-action {
+    background: transparent;
+    border: none;
+    color: #ff5c5c;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#actions-list .empty {
+    text-align: center;
+    opacity: 0.7;
+}
+
+.actions-panel {
+    text-align: left;          /* make text left-aligned */
+}

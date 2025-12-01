@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML Tag Showcase</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 30px;
+      background-color: #f5f7fa;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      color: #005f99;
+    }
+    section {
+      background: #fff;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #0077b6;
+      border-bottom: 2px solid #0077b6;
+      padding-bottom: 5px;
+    }
+    abbr {
+      text-decoration: underline dotted;
+      cursor: help;
+    }
+    blockquote {
+      background: #eaf4fc;
+      border-left: 5px solid #0077b6;
+      padding: 10px 20px;
+      font-style: italic;
+    }
+    code {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    pre {
+      background-color: #272822;
+      color: #f8f8f2;
+      padding: 10px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    mark {
+      background-color: #fff176;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+    kbd {
+      background-color: #333;
+      color: #fff;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #0077b6;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005f99;
+    }
+    ruby {
+      font-size: 1.4rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>HTML Tag Showcase</h1>
+
+  <section>
+    <h2>&lt;abbr&gt;</h2>
+    <p><abbr title="Cascading Style Sheets">CSS</abbr> controls the look and layout of web pages.</p>
+  </section>
+
+  <section>
+    <h2>&lt;blockquote&gt;</h2>
+    <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+      "The HTML blockquote Element indicates that the enclosed text is an extended quotation."
+    </blockquote>
+  </section>
+
+  <section>
+    <h2>&lt;cite&gt;</h2>
+    <p>This quote is from <cite>MDN Web Docs</cite>.</p>
+  </section>
+
+  <section>
+    <h2>&lt;code&gt; and &lt;pre&gt;</h2>
+    <p>Inline code: <code>let message = 'Hello World';</code></p>
+    <pre><code>// Preformatted example
+for (let i = 1; i <= 3; i++) {
+  console.log('Line ' + i);
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>&lt;dfn&gt;</h2>
+    <p>A <dfn id="algorithm">Algorithm</dfn> is a step-by-step procedure for solving a problem.</p>
+  </section>
+
+  <section>
+    <h2>&lt;kbd&gt;</h2>
+    <p>To paste text, press <kbd>Ctrl</kbd> + <kbd>V</kbd>.</p>
+  </section>
+
+  <section>
+    <h2>&lt;mark&gt;</h2>
+    <p>Here’s a <mark>highlighted</mark> piece of text.</p>
+  </section>
+
+  <section>
+    <h2>&lt;q&gt;</h2>
+    <p>He said, <q>Practice makes perfect.</q></p>
+  </section>
+
+  <section>
+    <h2>&lt;rp&gt; (within &lt;ruby&gt;)</h2>
+    <p>Japanese ruby text example:</p>
+    <ruby>
+      学<rp>(</rp><rt>がく</rt><rp>)</rp>
+      校<rp>(</rp><rt>こう</rt><rp>)</rp>
+    </ruby>
+  </section>
+
+  <section>
+    <h2>&lt;template&gt;</h2>
+    <template id="demo-template">
+      <div style="background:#e0f7fa;padding:10px;border-radius:6px;margin-top:8px;">
+        <strong>Template Card</strong>: This content was created dynamically.
+      </div>
+    </template>
+    <button id="showTemplate">Show Template Content</button>
+    <div id="output"></div>
+    <script>
+      document.getElementById('showTemplate').onclick = () => {
+        const tpl = document.getElementById('demo-template');
+        const clone = tpl.content.cloneNode(true);
+        document.getElementById('output').appendChild(clone);
+      };
+    </script>
+  </section>
+
+  <section>
+    <h2>&lt;time&gt;</h2>
+    <p>Event scheduled for <time datetime="2025-10-20T18:00">October 20, 2025, 6:00 PM</time>.</p>
+  </section>
+
+  <section>
+    <h2>&lt;var&gt;</h2>
+    <p>The formula is: <var>E</var> = <var>mc</var><sup>2</sup></p>
+  </section>
+
+  <section>
+    <h2>&lt;input&gt; and &lt;textarea&gt;</h2>
+    <form onsubmit="event.preventDefault();alert('Form submitted!')">
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Enter your username" required>
+
+      <label for="feedback">Feedback:</label>
+      <textarea id="feedback" rows="3" placeholder="Your feedback here..."></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>All tags demonstrated successfully — © 2025 HTML Showcase</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.box {
+    width: 150px;
+    height: 150px;
+    background: red;
+    animation: changeColor 3s infinite;
+}
+
+@keyframes changeColor {
+    0%   { background: red; }
+    33%  { background: yellow; }
+    66%  { background: green; }
+    100% { background: blue}
+}

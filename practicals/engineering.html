@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Engineering Theme Card</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #f0f6ff; /* soft modern blue background */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Engineering Card */
+        .card {
+            width: 350px;
+            padding: 25px;
+            border-radius: 15px;
+            background: #ffffff; /* clean white card */
+            border: 3px solid #2a72ff; /* blue accent border */
+            box-shadow: 10px 25px 35px rgba(0,0,0,0.18);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect */
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 35px rgba(0,0,0,0.25);
+        }
+
+        /* Heading in blue */
+        .card h2 {
+            color: #2a72ff; /* blue accent */
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* Line under heading */
+        .line {
+            height: 3px;
+            width: 80%;
+            background: #2a72ff;
+            margin: 0 auto 20px auto;
+            border-radius: 5px;
+        }
+
+        .card p {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #1a1a1a; /* deep grey text for readability */
+            text-align: justify;
+        }
+
+        /* Gear Icon */
+        .icon {
+            font-size: 45px;
+            color: #2a72ff;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="icon">⚙</div>
+
+    <h2>Engineering</h2>
+    <div class="line"></div>
+
+    <p>
+        Engineering is the application of scientific and mathematical principles to
+        design, build, and improve machines, structures, and systems. It helps solve
+        real-world problems with creativity, logic, and innovation.
+    </p>
+</div>
+
+</body>
+</html>

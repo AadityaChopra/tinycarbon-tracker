@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyCarbon Tracker - Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<header>
+    <h2>TinyCarbon Tracker</h2>
+    <p id="welcome"></p>
+</header>
+
+<nav class="tabs">
+    <button class="tab active" data-tab="actions">Actions</button>
+    <button class="tab" data-tab="stats">Stats</button>
+    <button class="tab" data-tab="rewards">Rewards</button>
+</nav>
+
+<main>
+    <!-- ACTIONS TAB -->
+    <section class="tab-content active" id="actions">
+
+        <h3>Track Your Micro-Actions</h3>
+
+        <div class="actions-grid">
+
+            <!-- SPEEDOMETER -->
+            <div class="speedometer-card">
+                <h4>Carbon Score</h4>
+                <div class="speedometer">
+                    <div class="gauge">
+                        <div class="needle" id="needle"></div>
+                        <div class="center-cap"></div>
+                    </div>
+                    <div class="zones">
+                        <span>Green Zone</span>
+                        <span>Moderate Zone</span>
+                        <span>Danger Zone</span>
+                    </div>
+                </div>
+                <p class="score-box">Score: <span id="carbon-score">0</span> g CO₂</p>
+                <p class="level-box">Status: <span id="level">Green Zone 🟢</span></p>
+            </div>
+
+            <!-- CHECKLIST -->
+            <div class="actions-panel">
+                <ul id="actions-list">
+                    <!-- Bad actions -->
+                    <li><input type="checkbox" data-score="500"> Used AC for 1 hour</li>
+                    <li><input type="checkbox" data-score="50"> Used Plastic Bag</li>
+                    <li><input type="checkbox" data-score="200"> Ordered Online Delivery</li>
+                    <li><input type="checkbox" data-score="70"> Forgot to Turn Off Electrical Appliances</li>
+                    <li><input type="checkbox" data-score="50"> Didn't Turn the Tap Off</li>
+
+                    <!-- Good actions -->
+                    <li><input type="checkbox" data-score="-100"> Took Stairs instead of Elevator</li>
+                    <li><input type="checkbox" data-score="-40"> Turned Tap Off Properly</li>
+                    <li><input type="checkbox" data-score="-130"> Used Reusable Bottle instead of Plastic</li>
+                    <li><input type="checkbox" data-score="-100"> Carpooled To College</li>
+                    <li><input type="checkbox" data-score="-50"> Turned off Electrical Appliances Before Going Out</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- STATS TAB -->
+    <section class="tab-content" id="stats">
+
+        <h4>Streak Progress</h4>
+        <canvas id="streakChart"></canvas> <!-- Line Chart -->
+
+        <button id="save-score-btn">Save Today’s Score</button>
+        <p id="streak">Streak: 0 🔥</p>
+    </section>
+
+
+
+    <!-- REWARDS TAB -->
+    <section class="tab-content" id="rewards">
+        <h3>Your Eco Rewards</h3>
+        <div id="badges"><p>No badges unlocked yet 👀</p></div>
+    </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
